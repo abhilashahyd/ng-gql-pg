@@ -1,0 +1,12 @@
+* {
+  background-color: #5453a4;
+  color: whitesmoke;
+  opacity: 100%;
+
+}
+
+.header-div {
+  border-bottom: 2px solid #302f74;
+  padding-top: 20px;
+   background-color: #5453A4!important;
+}

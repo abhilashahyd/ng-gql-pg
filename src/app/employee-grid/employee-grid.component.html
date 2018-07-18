@@ -1,0 +1,23 @@
+<p style="padding-left:20px;">
+Employees
+</p>
+<div *ngIf="emp">
+<p-table [value]="emp">
+
+  <ng-template pTemplate="header">
+    <tr>
+      <th *ngFor="let col of cols">
+        {{col.header}}
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-employee let-details="rowData" let-i="rowIndex">
+    <tr>
+      <td *ngFor="let col of cols">
+        <!-- <span *ngIf="col.field==='details'"><button pButton (click)="show(i)" [ngClass]="['viewDetailsBtn']" >VIEW DETAILS</button></span> -->
+        <span>{{employee[col.field]}}</span>
+      </td>
+    </tr>
+     </ng-template>
+</p-table>
+</div>

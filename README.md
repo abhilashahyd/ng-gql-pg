@@ -12,8 +12,11 @@ Run the graphql server using
 ```
 node server.js
 ```
+Navigate to http://localhost:4000/graphql to view the Graphiql(query mode) for your graphql server.
 
-Run the Angular application in a different window
+Run the Angular application in a different window inside your project repository using
 ```
 ng serve --open
 ```
+
+This opens up your browser and navigates to http://localhost:4200/ to view the Angular application.

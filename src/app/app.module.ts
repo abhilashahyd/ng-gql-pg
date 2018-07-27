@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { EmployeeGridComponent } from './employee-grid/employee-grid.component';
 import { TableModule } from 'primeng/table';
 
+import {NgxPaginationModule} from 'ngx-pagination';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { TableModule } from 'primeng/table';
     HttpClientModule,
     ApolloModule,
     HttpLinkModule,
-    TableModule
+    TableModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

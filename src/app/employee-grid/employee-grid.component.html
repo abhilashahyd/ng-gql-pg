@@ -2,7 +2,7 @@
 Employees
 </p>
 <div *ngIf="emp">
-<p-table [value]="emp">
+<p-table [value]="emp  | paginate :{ itemsPerPage:10 , currentPage:p }">
 
   <ng-template pTemplate="header">
     <tr>
@@ -14,10 +14,15 @@ Employees
   <ng-template pTemplate="body" let-employee let-details="rowData" let-i="rowIndex">
     <tr>
       <td *ngFor="let col of cols">
-        <!-- <span *ngIf="col.field==='details'"><button pButton (click)="show(i)" [ngClass]="['viewDetailsBtn']" >VIEW DETAILS</button></span> -->
         <span>{{employee[col.field]}}</span>
       </td>
     </tr>
      </ng-template>
 </p-table>
+<!-- <ul>
+      <li *ngFor="let item of emp | paginate: { itemsPerPage: 10, currentPage: p }">
+      {{item.employee_id}}-{{item.firstname}} {{item.lastname}}
+</li>
+</ul> -->
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>

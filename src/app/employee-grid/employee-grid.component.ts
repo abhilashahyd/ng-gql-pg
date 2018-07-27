@@ -13,6 +13,7 @@ export class EmployeeGridComponent implements OnInit {
 cols:any[];
 emp: Employee[];
 empSubscription: Subscription;
+p: number =1;
 
 constructor(private apollo: Apollo) { }
 
@@ -37,6 +38,7 @@ constructor(private apollo: Apollo) { }
        .subscribe(({ data, loading }) => {
           this.emp = data.allEmployees;
       });
+
    }
 
    ngOnDestroy() {
